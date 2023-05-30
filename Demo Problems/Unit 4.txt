@@ -1,0 +1,129 @@
+// ### Problem 1 ###
+//Write a program that will take input from the
+//  command line using argc and argv
+//The user should enter one or more numbers on the
+//  command line. Print the sum of those words.
+
+// ### Problem 2 ###
+//Write a program that will take input from the
+//  command line using argc and argv
+//The user should enter an operator followed by two
+// numbers on the command line. Compute the operation.
+
+// ### Problem 3 ###
+//Write a program that will take input from the
+//  command line using argc and argv
+//The user should enter one or more words on the
+//  command line. Print every vowel in those words.
+
+// ### Problem 4 ###
+//Write a program that will take input from the
+//  command line using argc and argv
+//The user should enter the name of a file containing
+// some numbers on the command line. Print the mean
+// of the numbers in the file.
+
+// ### Problem 5 ###
+//Write a class called Sphere with these member variables:
+//  int radius
+//  float volume
+//The member variables shouls be private
+//Add a constructor that takes one int as a parameter.
+//  Set radius to the value of the vale of that int 
+//  and calculate volume as 4/3 * Pi * radius^3
+//Add a getter for radius and area
+
+//  ### Problem 6 ###
+//Write a function called willItFit that takes these parameters:
+//  Sphere s1
+//  Sphere s2
+//Return true if s1 will fit inside of s2.
+//Return false otherwise.
+
+// ### Problem 7 ###
+//Write a class called BankAccount with these member variables:
+//  float balance
+//Add a constructor that sets balance to 0
+//Add a member function called deposit that takes a float parameter
+//  Credit the value of the parameter to the balance.
+//Add a member function called withdraw that takes a float parameter
+//  If the parameter is less than or equal to balance, credit the 
+//  ammount and return true.
+//  Otherwise return false.
+
+// ### Problem 8 ###
+//Write a function that takes these parameters:
+//  Account acc
+//  float credits[]
+//  float debits[]
+//  int numCredits
+//  int numDebits
+//First apply all of the credits in the credits array to acc
+//  using the deposit method.
+//Next apply all of the debits in the debits array to acc
+//  using the withdraw method
+//Return true if all of the withdraws were applied successfully
+
+// ### Problem 9 ###
+//Define a class called House with the following data member:
+//  string address
+//  float listPrice
+//  float area
+//Add three constructos:
+//  1) Take no parameters, set all data members to default values
+//  2) Pass in values for all data members
+//  3) Pass in another instance of the class, copy the values of its parameters
+//Add getters (not setters)
+
+// ### Problem 10 ###
+//Add a method (member function) to House called comparePrice
+//The method should take another House as a parameter
+//Print the address of the House that has a cheaper price PER SQUARE FOOT
+//Return nothing
+
+// ### Problem 11 ###
+//Add a method (member function) to House called discountPrice
+//Allow the user to pass in a new price.
+//If the new price is higher than the old one return false
+//Otherwise print the percentage of the discount and return true
+//Calculate the discount using (old - new)/old
+
+// ### Problem 12 ###
+//Write a function (not a method) called sortHouses that takes an
+// array of Houses and the array's size as parameters.
+//Print the array in sorted order.
+
+// ### Problem 13 ###
+//Define a class called Employee with these member variables:
+//  string name;
+//  string idNumber;
+//  float hourlyRate;
+//Add a constructor that prompts a user to enter values for the data members.
+//Add a getter for hourlyRate and idNumber.
+
+// ### Problem 14 ###
+//Define a class called PayRoll with these data members:
+//  Employee* employeeList
+//  int numberOfEmps
+//Add a constructor that takes these parameter:
+//  int SIZE
+//In the constructor, dynamically allocate an array of Employees
+//   and point employeeList to it. The constructor should also set
+//  numberofEmps equal to size.
+
+// ### Problem 15 ###
+//Add a member function to PayRoll called payEmployees that 
+//  takes these parameters:
+//  string id[]
+//  float workedHours
+//This function should iterate through both arrays.
+//  For every employee with an id in the id array,
+//  multiply their hourly rate with the number of hours they worked.
+//Return the total ammount paid to all Employees.
+
+// ### Problem 16 ###
+//Add a member function to PayRoll called highestAndLowest that
+//  takes no parameters.
+//Print the idNumber of the Employee in employeeList that has the
+//  highest payrate, and the idNumber of the Employee with the
+//  lowest pay rate.

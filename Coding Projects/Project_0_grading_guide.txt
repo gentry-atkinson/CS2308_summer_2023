@@ -1,0 +1,70 @@
+### Style ###
+This is the exact same as the CS1428 projects
+
+1. Lines less than 80 characters:
+    1 or 2 lines over: -1 point
+    3 to 5 lines over: -2 points
+    5 to 10 lines over: -3 points
+    11+ lines over: -4 points
+
+2. Variables have meaningful names:
+    Pretty much everyone gets full points for this.
+
+3. Every block indented:
+    1 or 2 lines not indented: full credit
+    Some indenting but it's not consistent: -1 points
+    Nothing indented: -2 points
+
+4. Code is not duplicated between branches (e.g. in an if...else)
+    Every statement duplicated in an "if" or "switch": -1 point each up to -2 
+
+4. Comments for complicated actions:
+    More than 5 comments in their code: full credit
+    2 or 4 comments: -1 point
+    No comments after authorship comment: -2 points
+
+5. File name is...
+    Any other name: -1 or -2 depending on how close it is
+
+6. Name and Date Comment:
+    Name not included: -1 point
+    Data not included: -0.5 points
+    Collaborators not included: -0.5 points
+
+### Non-functional Requirements ###
+
+1. Robot position is stored in a struct.
+    Position stored as a separate struct, not part of Robot: -2 points
+    'Last command' member not included in Robot struct: -2 points
+    Position stored as variables not in a struct: -5 points
+    Position not stored: -10 points
+
+2. Robot position is updated by a moveRobot function.
+    Robot parameter is not passed by reference: -5 points
+    Position is updated correctly, but not in the MoveRobot function: -5 points
+    Position is not upadated in Robot struct: -5 points
+    MoveRobot function is correct but is not called: -5 points
+    Program does not update the position of the robot: -10 points
+
+### Test Cases ###
+1. Start Program
+    Menu is printed, but does not have all options: -2 points
+    Menu is not printed: -5 points
+    Program does not compile or run: (just put the name on a list)
+
+2. U
+    Wrong value in position is updated: -5 points
+    Position is updated but the new value isn't printed: -5 points
+    Position is not updated: -10 points
+    Program crashes: (just put the name on a list)
+
+3. T
+    Program does not print an error: -2 points
+    Program tries to update the robot's position but fails: -5 points
+    Program does update robot's position: -10 points
+    Program crashes: (just put the name on a list)
+
+4. Q
+    Program exits without printing a "goodbye" message: -2 points
+    Program keeps running: -10 points
+    

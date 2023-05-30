@@ -1,0 +1,129 @@
+// ### Problem 6.1 ###
+//Create a header file (.h) for the LinkedList class
+//  from the 5.2 In-Class Problems.
+
+// ### Problem 6.2 ###
+//Create the implementation file (.cpp) for the LinkedList 
+//  class from the 5.2 In-Class Problems.
+
+// ### Problem 6.3 ###
+//Create a drvier file (main.cpp) and us it to create a
+//  LinkedList.
+//Use the member functions of the LinkedLis to:
+//  -Add the values {1, 2, 3, 4} to the list
+//  -Print the list
+//  -Swap the head and tail of the list
+//  -Print the list
+//  -Remove the head node of the list
+//  -Print the mean of all value in the list. (2)
+
+// ### Problem 6.4 ###
+//Prompt the user to enter a list of integers which is terminated
+//  with a zero. Store the user's input in a Vector.
+//Print the sum of every two consecutive numbers.
+//
+//Example Input: 3 6 2 8 5 0
+//Example Output: 9 8 10 13 5
+
+// ### Problem 6.5 ###
+//Prompt the user to enter a list of names. Store their input in
+//  one or two Vectors. Stop taking input when the user enters a
+//  blank line as input.
+//First, print every name that starts with a vowel.
+//Second, print every name that starts with a consonant.
+
+// ### Problem 6.6 ###
+//Using this class definition:
+class Dog{
+    private:
+        string name, breed;
+    public:
+        Dog(string n, string b){
+            name = n; breed = b;
+        }
+        string getName(){return name;}
+        string getBreed(){return breed;}
+}
+//Use a Vector to store a list of Dog pointers
+//Dynamically allocate these Dogs and store them in
+//  the vector:
+//  Name        Breed
+//--------------------------------
+//  Charlie     Pointer 
+//  Rex         Bulldog
+//  Duncan      Scotty
+//  Jasper      Dane
+
+// ### Problem 6.7 ###
+//Using the Vector created in Problem 6.7
+//  find the dogs with the longest and shortest
+//  names.
+
+// ### Problem 6.7 ###
+//Using this class definition:
+
+class LLStack{
+    private:
+        class Node{
+            public:
+                int val;
+                Node* next;
+                Node(int v){val = v;next = NULL;}
+        };
+        Node* head = NULL; 
+    public:
+        void push(int);
+        int pop();
+        bool isEmpty();
+        int size();
+}
+//Implement the push member function.
+
+// ### Problem 6.8 ###
+//Using the LLStack Class definition
+//  implement the pop member function.
+
+// ### Problem 6.9 ###
+//Using the LLStack Class definition
+//  implement the isEmpty member function.
+
+// ### Problem 6.10 ###
+//Using the LLStack Class definition
+//  implement the size member function.
+
+// ### Problem 6.11 ###
+//Using this class definition:
+
+class ArrayQueue{
+    private:
+        int* list;
+        int size;
+        void grow();
+        int head, tail; 
+    public:
+        ArrayQueue(){
+            size = 4;
+            list = new int[size];
+            head = 0;
+            tail = 0;
+        }
+        ~ArrayQueue(){
+            delete [] list;
+        }
+        void enqueue(int);
+        int dequeue();
+        bool isEmpty();
+}
+//Implement the enqueue member function.
+
+// ### Problem 6.12 ###
+//Using the LLStack Class definition
+//  implement the dequeue member function.
+
+// ### Problem 6.13 ###
+//Using the LLStack Class definition
+//  implement the grow member function.
+
+// ### Problem 6.14 ###
+//Using the LLStack Class definition
+//  implement the isEmpty member function.

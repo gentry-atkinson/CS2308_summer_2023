@@ -1,0 +1,226 @@
+/* ### Problem 3.1 ### */
+//Write a function with the following parameters:
+//  a:      an integer array
+//  SIZE:   the size of a
+//Print every VALUE in a that is stored at a memory location
+//  whose address is evenly divisible by 10
+
+/* ### Problem 3.2 ### */
+//Write a function with the following parameters:
+//  a:  an integer pointer
+//  b:  an integer pointer
+//Swap the value pointed to (referenced) by a and b
+
+/* ### Problem 3.3 ### */
+//Correct the code for the makeCapital function below
+//The function should capitalize the first character in
+//  the character array (c-string) named str, and every
+//  character that follows a whitespace
+
+#include<iostream>
+#include <ctype.h>
+#include<cstring>
+
+using namespace std;
+
+void makeCapital(char str[]){
+    char* ptr = str;
+    *ptr = toupper(*ptr);
+
+    //strlen returns the length of a C-String
+    for(int i = 1; i < strlen(str);i++){
+        //compare to blank character
+        if (*(ptr + i - 1) ==  ){
+            ptr = toupper(*(ptr + i));
+        }
+    }
+    return;
+}
+
+int main(int argc, char** argv){
+    char str[] = "hello everyone";
+    makeCapital(str);
+    cout << str << endl;
+    return 0;
+}
+
+/* ### Problem 3.4 ### */
+//Analyze the function below.
+//Try to predict the output of this function is its input is "ABCDEF"
+
+void secretFunc(char str[]){
+    char* ptr = str;
+    bool inc = true;
+    //strlen returns the length of a c-string
+    while(ptr < &str[strlen(str)]){
+        if(int(*ptr) %2 == 0){
+            if(inc){
+                *ptr = *ptr+1;
+            }
+            else{
+                *ptr = *ptr-1;
+            }
+            inc = !inc;
+        }
+        ptr++;
+    }
+    cout << str << endl;
+}
+
+/* ### Problem 3.5 ### */
+//Write a function that takes these parameters:
+//  arr:    an integer array
+//  SIZE:   the size of arr
+Return a pointer to the largest number stored in arr.
+
+/* ### Problem 3.6 ### */
+//Write a function that takes these parameters:
+//  d:          a pointer to a Dog struct
+//  newName:    a string
+//If d is not NULL, set the dog's name to newName.
+//Use this definition for Dog
+
+struct Dog{
+    string name, breed;
+    int age;
+};
+
+/* ### Problem 3.7 ### */
+//Update the function below to use a pointer to a Dog struct
+//  rather than using C++ passing by reference.
+//Rember to check to see if your function has been pass a NULL
+//  pointer.
+//Use the definition of Dog from 3.6
+
+void updateName(Dog &d){
+    if (d.breed == "Poodle"){
+        d.name = "Dr. " + d.name;
+    }
+    else if(d.breed == "Terrior"){
+        d.name = "Super " + d.name;
+    }
+    return;
+} 
+
+/* ### Problem 3.8 ### */
+//Read through the code below.
+//Predict the output of secretFunc when its input is 1, 5, 9
+
+void secretFunc(int a, int b, int c){
+    int d[c];
+    int e = 0;
+    for(int* f = d; f < &d[c]; f++){
+        *f = e;
+        if (f == &d[a]) e++;
+        if (f == &d[b]) e++;
+    }
+    e = 0;
+    for(int* g = &d[c-1]; g>=&d[0]; g--){
+        e += *g;
+    }
+    cout << e << endl;
+}
+
+/* ### Problem 3.9 ### */
+//Add code to the main function below to dynamically allocate
+// an array of 7 grades for the Student s.
+struct Student{
+    string name;
+    string ID_num;
+    int* grades;
+};
+
+
+int main(int argc, char** argv){
+    Student s = {"Gentry", "A0123"};
+    return 0;
+}
+
+/* ### Problem 3.10 ### */
+//A destructor is a special function that runs when a struct
+// is removed from memory.
+//Add a destructor to the Student struct to free all dynamically
+//  allocated memory.
+
+/* ### Problem 3.11 ### */
+//Use the Student pointer in the main function below to dynamically
+//  allocate memory for one Student.
+//Set the Student's members to:
+//  name: Pearl
+//  ID_num:  A0456
+//  grades: 89, 92, 85
+
+int main(int argc, char** argv){
+    Student* s;
+    return 0;
+}
+
+/* ### Problem 3.12 ### */
+//Predict the output of secretFunc
+
+void secretFunc(){
+    int SIZE = 4;
+    int* a = new int[SIZE];
+    int* p = a;
+    for(; p<&a[SIZE]; p++) 
+        *p = 0;
+
+    p = a;        
+    
+    while(*p != 7){
+        p = &a[rand()%SIZE];
+        if (*p != 0){
+            SIZE++;
+            delete [] a;
+            a = new int[SIZE];
+            for(; p<&a[SIZE]; p++) 
+                *p = 0;
+        }
+        else{
+            *p = rand()%10;
+        }
+    }
+    cout << *p << endl;
+}
+
+/* ###Problem 3.13### */
+//Write a function that takes these parameters:
+//  int SIZE
+//Dynamically allocate an array of of Computer pointers.
+//The size of this array is given by the SIZE parameter.
+//For every element in the array, dynamically allocate memory
+//  to store one Computer.
+//Use the definition for a Computer struct below
+
+struct Computer{
+    string brand;
+    int gigOfRam;
+    int procCores;
+    float procSpeed;
+    float diskTer;
+};
+
+/* ###Problem 3.14### */
+//Write a function that takes two Computer pointers as parameters
+//Copy all of the members from the first Computer into the second Computer
+
+/* ###Problem 3.15### */
+//Write a function that takes these parameters:
+//  an array of Computer pointers
+//  the size of the list
+//  another Computer pointer
+//Dynamically allocate a new list of Computer pointers that is one bigger
+//  than the list you were passed
+//Copy all of the Computers from the old list into the new one.
+//Copy the extra computer into the last position in the list.
+//Be sure to delete the old list.
+//Return the pointer to the new list.
+
+/* ###Problem 3.16### */
+//Create a new struct called ComputerList that has these members
+//  a Computer pointer pointer
+//  the current size of the Computer list
+//Adapt the first function as the constructor of this struct
+//Adapt the third function so that it is passed a ComputerList
+//  rather than its current first two parameters.
+

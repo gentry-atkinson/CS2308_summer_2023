@@ -1,0 +1,196 @@
+/*### Problem 1.1  ###*/
+//Write a function called biggerOfThree to determine which of
+//  its three parameters is the biggest.
+//Parameters: 
+//  int a 
+//  int b 
+//  int c
+//Returns: 1 if a is the biggest, 2 if b is the biggest, 3 otherwise
+//Side Effects: none
+
+
+/*### Problem 1.2 ###*/
+//Write a function called validPassword to determine if a user
+//  entered password is valid.
+//Parameters: 
+//  string pw
+//  int min_len
+//Returns: true if pw is at least min_len in length and contains
+//  one or more upper case character. False otherwise.
+//Side Effects: none
+
+/*### Problem 1.3 ###*/
+//Write a function called calculator to perform simple
+//  mathematical functions.
+//Parameters:
+//  char op
+//  int a
+//  int b
+//Return: a op b where if op is an operator in [+, -, *, /]
+//  or 0 otherwise
+//Side Effects: none
+
+/*### Problem 1.4 ###*/
+//Write a function called foo which write 'foo' to a file
+//Parameters:
+//  string filename
+//Return: nothing
+//Side Effects: write the word 'foo' to the file named filename
+
+//Write another function called bar, which calls foo
+//Parameters:
+//  int a
+//  int b
+//  string file_a
+//  string file_b
+//Return: nothing
+//Side Effects: call foo a times for filename file_a and
+//  b times with filename file_b
+
+/*###Problem 1.5 ###*/
+//Write a code snippet that creates a two dimensional array
+//  of ints called allProds.
+//The size of this array should be 10x10.
+//Right nested for loops to store the value row*column in each
+//  element of the array.
+
+/*###Problem 1.6 ###*/
+//Write a code snippet that creates a two dimensional array
+//  of floats called smallArr
+//Initialze the array with these values:
+//  {{2, 4, 8},
+//  {16, 32, 64},
+//  {128, 256, 512}}
+//Write a loop or loops to print every row of the array.
+//Write a loop or loops to print every column of the array.
+
+/*###Problem 1.7 ###*/
+//Write a code snippet to create an array of integers called
+//  randInts. This array should hold 100,000 values.
+//Write a for loop to store a random value into every element
+//  of the array
+//Write a second loop to iterate through the array to find the
+//  largest number in the array.
+//Print the largest number.
+
+/*###Problem 1.8 ###*/
+//Write a code snippet to create a three dimensional array
+//  of characters. The size of the array is 4x4x4.
+//Write a loop to store a different character into every element
+//  of the array.
+//Use a loop or loops to print every element of the array where 
+//  two of the three dimensions are the same.
+//Example: array[1][1][2] or array[0][3][0] but not array[1][2][3]
+
+/*###Problem 1.9 ###*/
+//Add this struct to your program:
+struct Address{
+    string streetAddress;
+    int zip;
+    string city;
+};
+//Add a for loop to the main to create an array of Addresses
+//Your array should store 10
+//Write a for loop to allow a user to assign values to
+// the member of each Address in the array
+
+/*###Problem 1.10 ###*/
+//Add this struct to your program:
+struct Line{
+    int start_x;
+    int start_y;
+    int end_x;
+    int end_y;
+};
+
+//Write a function called lineLength;
+//Parameters: Line l
+//Returns: the length of l
+//Side Effects: none
+//Note: the length of a line is sqrt((change in x)^2 + (change in y)^2)
+
+/*###Problem 1.11 ###*/
+//Write a definition for a struct called WeatherWeek with these members:
+//  float dailyTemps[7];
+//  float dailyPrecip[7];
+//  float avgTemp;
+
+//Add a constructor to this struct which will take an array of temperatures
+// and an array of precipitation numbers as parameters
+//Use a for loop to copy the parameter values into the correct struct members;
+//Your constructor should automatically assign the correct average temperatures
+//  to avgTemp. 
+
+/*###Problem 1.12 ###*/
+//Add these structs to your program:
+struct Car{
+    string make;
+    string model;
+    float horsePower;
+};
+
+struct Garage{
+    Car cars[10];
+    int numCars; //the number of cars in the garage
+    const int MAX_CARS = 10;
+    Garage(string makes[], string models[], float powers[], int numCars){
+        for(int i = 0; i < numCars; i++){
+            cars[i].make = makes[i];
+            cars[i].model = models[i];
+            cars[i].horsePower = powers[i];
+        }
+    }
+};
+
+//Write a function called mostPowerful
+//Parameters: Garage g
+//Return: nothing
+//Side Effectgs: print the make and model of the most powerful car in the garage.
+
+/*###Problem 1.13 ###*/
+//Write a void function called makeEven.
+//Your function should take an array of integers as a parameter.
+//Iterate through the array, making every odd value into an even value.
+//You can select the method for turning an odd value into an even one.
+//Ignore the even values in the array.
+//You should guarantee that you do not access the array out of bounds, which
+//  may involve adding another parameter.
+
+/*###Problem 1.14 ###*/
+//Add this struct to your code:
+struct Event{
+    string name;
+    int startTime;
+    int endTime;
+    bool conflict;
+}
+
+//Now write a function called findConflict
+//Your functions should take two events as by reference parameters.
+//If the start and end times of the two conflicts overalp, set the
+//  conflict member of both Events to true.
+//Otherwise set the conflict flags to false. 
+
+/*###Problem 1.15 ###*/
+//Write a void function called meanAndMode.
+//Your function should take these parameters:
+//  values: an array of integers with values 0-9
+//  SIZE: the size of the values array
+//  mean: a by reference float
+//  mode: a by reference int
+//Your program should set the value of the mean and mode parameters
+//  to be the mean and mode of the values array.
+//Note: the mean is the average of the array. The mode is the most
+//  common value in the array.
+
+/*###Problem 1.16 ###*/
+//Write a function called grammarCheck that returns an integer.
+//Your function should take these parameters:
+//  string sentence
+//  bool endPunc
+//  bool startCap
+//Set endPunc to true if sentence ends with . ! or ?
+//False otherwise.
+//Set startCap to true if sentence starts with a capital letter
+//False otherwise
+//Return the number of erros found in the sentence: 0, 1, or 2

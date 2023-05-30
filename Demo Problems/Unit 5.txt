@@ -1,0 +1,100 @@
+// ### Problem 5.1 ###
+//Use this definition of a list Node:
+
+class Node{
+    public:
+      string val;
+      Node* next;
+};
+
+//Write a function to determine if a list is empty or not.
+//Return true if the list is empty, false otherwise.
+
+// ### Problem 5.2 ###
+//Use the definition of a list Node above
+//Write a function to count the number of node
+//  in a list. Return the number of nodes from the
+//  function.
+
+// ### Problem 5.3 ###
+//Use the definition of a list Node above
+//Write a function that takes these parameters:
+//  Node* list
+//  Node* newNode
+//Insert newNode at the tail of list.
+
+// ### Problem 5.4 ###
+//Use the definition of a list Node above
+//Write a function to find the largest value in a
+//  linked list. Return a pointer to the node 
+//  containing the highest value.
+
+// ### Problem 5.5 ###
+//Use the definition of a list Node above
+//Write a function to find the middle node in a
+//  linked list (i.e. size/2). Return a pointer
+//  to the middle node. Return NULL if the list
+//  is empty.
+
+// ### Problem 5.6 ###
+//Use the definition of a list Node above
+//Write a function to delete a list node
+//  with a target value.
+
+// ### Problem 5.7 ###
+//Use the definition of a list Node above
+//Write a function that takes these parameters
+//  Node* list
+//  Node* newNode
+//Assume that the list is in sorted order. Insert
+//  newNode into list at the correct position.
+
+// ### Problem 5.8 ###
+//Use the definition of a list Node above
+//Write a function that takes these parameters
+//  Node* list1
+//  Node* list2
+//Concatenate list1 onto list 2 so that they
+//  form one long linked list. 
+
+// ### Problem 5.9 ###
+//Review this list searching function:
+int searchList(const int a[], int SIZE, int target){
+  for(int i = 0; i < SIZE; i++){
+    if (a[i] == target)
+      return i;
+  }
+  return -1;
+}
+//Update the function to implement the same algorithm
+//  on a linked list.
+
+// ### Problem 5.10 ###
+Use this LinkedList class:
+
+class LinkedList{
+    private:
+        class Node{
+            public:
+                int val;
+                Node* next;
+                Node(int v){val = v;next = NULL;}
+        };
+        Node* head; 
+    public:
+}
+
+//Add an insert member function to this class to add
+//  a new Node to the list. Your function should always
+//  insert at the head of the list.
+
+// ### Problem 5.11 ###
+//Add a delete member function to the same LinkedList class
+//Your function should delete the head Node of the list
+//  but shouldn't make any other changes.
+
+// ### Problem 5.12 ###
+//Add a member function to LinkedList called insertAfter.
+//The function should insert a new node after another Node
+//  that contains a target value. Your funciton should do 
+//  do nothing if the target value is not in the list.

@@ -1,0 +1,139 @@
+### Style ###
+This is the exact same as the CS1428 projects and Project 1
+
+1. Lines less than 80 characters:
+    1 or 2 lines over: -1 point
+    3 to 5 lines over: -2 points
+    5 to 10 lines over: -3 points
+    11+ lines over: -4 points
+
+2. Variables have meaningful names:
+    Pretty much everyone gets full points for this.
+
+3. Functions and actions are fully commented
+    There should be a function every 4 or 5 lines or for "complicated" actions.
+    Few comments: -2 points
+    Only 1 or 2 comments: -3 points
+    No comments: -4 points
+
+4. Every block indented:
+    1 or 2 lines not indented: full credit
+    Some indenting but it's not consistent: -1 points
+    Nothing indented: -2 points
+
+5. Code is not duplicated between branches (e.g. in an if...else):
+    Only take off credit if a statement is duplicated in EVERY path of a branch.
+    Every switch or if..else that contains the same statement in every path: -1 points up to 2 points off
+
+6. File name is...
+    OK, I keep forgetting to update this entry in the rubric and that's my fault.
+    So we will be accepting [Author's Last Name]_assignment and then any number.
+    Any other name: -1 or -2 depending on how close it is
+
+7. Name and Date Comment:
+    Name not included: -1 point
+    Data not included: -1 point
+
+### Non-functional Requirements ###
+
+1. Robot struct has all listed member.
+    Members missing X, Y, lastCommand, currentSpeed, distance, or name : -1 point each
+    Program does not set names for robots: -3 points
+    Position stored as a separate variable or variables, not part of Robot: -3 points
+    Position not stored: -5 points
+
+2. All functions are fully commented.
+    Every function should have a comment for PARAMETERS, RETURNS, and SIDE EFFECTS
+    Comments not in Parameters, Returns, Side Effects format: -1 point
+    Comments in function, but not outside of function: -2 point
+    Comments are very "light" (e.g. just the nam of the funciton): -4 points
+    No comments: -5 points
+     
+
+3. Program stores dynamically allocated array of Robot pointers with the size input at run-time.
+    Program always allocates space for 3 robots: -3 points
+    Program stores an array of Robots, rather than Robot pointers: -4 points
+    Robot list is statically allocated rather than dynamically: -6 points
+    Program stores a single robot: -10 points
+    
+4. Memory for the list of Robots is allocated in the makeRoboList function.
+    makeRoboList function is defined but not called: -2 points
+    Robolist is allocated in main function: -3 points
+    makeRoboList is called, but the progam does not catch its return: -3 points
+    Program statically allocates an array of Robots in main: -5 points
+    
+5. All dynamically allocated memory is deleted
+    Program fails to delete individual Robots: -2 points
+    Program fails to delete roboList array: -3 points
+    Program doesn't delete anything: -5 points
+   
+
+### Test Cases ###
+Do not grade the test cases for programs that do not compile. Just grade them as 0 for
+each test case.
+
+Programs that crash, halt, or terminate early should be graded as a 0 for every case
+that would have been tested after the halt.
+
+Please still maintain a list of programs that crash, quit early, or do not compile. I'll
+check those myself to see if they compile in a different environment for some reason.
+
+1. Start Program 3 Autumn Marwa Keiko
+    'Welcome' message of some sort is not printed: -2 points
+    Program does not ask for a number of Robots: -2 points
+    Program does not accept input for robots' names: -2 points
+     
+
+2. m Marwa L M Marwa l m Marwa L
+    Program does not print new position: -2 points
+    Robot does not speed up: -3 points
+    Wrong attribute is updated: -3 points
+    Wrong robot is updated: -5 points
+
+3. M Autumn r m Autumn l
+    Program does not print new position: -2 points
+    Robot does speed up: -2 points
+    Wrong attribute is updated: -2 points
+    Wrong robot is updated: -3 points
+
+4. M Keiko r m Keiko d m Keiko D
+    Program does not print new position: -2 points
+    Robots speeds up when it shouldn't or doesn't when it should: -3 points
+    Wrong attribute is updated: -3 points
+    Wrong robot is updated: -5 points
+
+5. m Marwa L M Marwa l m Marwa L
+    Program does not print new position: -2 points
+    Robot does not speed up: -3 points
+    Wrong attribute is updated: -3 points
+    Wrong robot is updated: -5 points
+    
+6. T
+    Program does not print an error: -2 points
+    Program tries to update a robot's position but fails: -3 points
+    Program does update a robot's position or prints distances: -5 points
+
+6. M Karl
+    Program does not print an error message, but doesn't do anything else: -2 points
+    Program tries to move a robot or asks for a direction: -5 points 
+
+7. M Keiko e m Keiko D
+    Program does not print new position: -2 points
+    No error message printed: -2 points
+    Robots speeds up when it shouldn't or doesn't when it should: -3 points
+    Wrong attribute is updated: -3 points
+    Wrong robot is updated: -5 points 
+
+
+7. D
+    Distances are not in sorted order: -5 points
+    Not all robots are in list: -5 points
+    Distances are incorrect: -3 points/distance
+    Distances are printed without names: -10 points
+    Names are printed without distances: -10 points
+    
+
+8. Q
+    Program exits without printing a "goodbye" message: -2 points
+    Program keeps running: -5 points
+    

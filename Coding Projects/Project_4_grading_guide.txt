@@ -1,0 +1,136 @@
+### Style ###
+This is mostly the same as the past projects
+
+1. Lines less than 80 characters:
+    1 or 2 lines over: -1 point
+    3 to 5 lines over: -2 points
+    5 to 10 lines over: -3 points
+    11+ lines over: -4 points
+
+2. Variables have meaningful names:
+    Pretty much everyone gets full points for this.
+
+3. Functions and actions are fully commented
+    There should be a function every 4 or 5 lines or for "complicated" actions.
+    Few comments: -2 points
+    Only 1 or 2 comments: -3 points
+    No comments: -4 points
+
+4. Every block indented:
+    1 or 2 lines not indented: full credit
+    Some indenting but it's not consistent: -1 points
+    Nothing indented: -2 points
+
+5. Code is not duplicated between branches (e.g. in an if...else):
+    Only take off credit if a statement is duplicated in EVERY path of a branch.
+    Every switch or if..else that contains the same statement in every path: -1 points up to 2 points off
+
+6. File names are: Robot.h, Robot.cpp, RobotList.h, RobotList.cpp, and main.cpp
+    Canvas might change names so be careful. There might be an extra number
+    added to the name. Change the file names if you have to.
+    Take of a point or two if the names aren't close to what they're supposed
+    to be.
+
+7. Name and Date Comment:
+    Name not included: -1 point
+    Data not included: -1 point
+
+### Non-functional Requirements ###
+
+1. Robot and RobotList has been defined as classes, not structs
+    Pretty much yes or no. If it's still a struct: -2 points per class
+
+2. Robot and RobotList classes have all listed member variables and functions.
+    Members missing X, Y, lastCommand, currentSpeed, distance, or name : -1 point each
+    moveRobot is not a member function of the Robot class: -1 point
+    findRobot is not a membmer funciton RobotList class: -1 point
+    Missing getter or setter that is needed: -1 point each
+
+3. All functions are fully commented.
+    Comments not in Parameters, Returns, Side Effects format: -1 point
+    Comments in function, but not outside of function: -2 point
+    Comments are very "light" (e.g. just the nam of the funciton): -3 points
+    No comments: -4 points
+     
+4. Program stores Robots in a linked list
+    Program creates a linked list but doesn't use it: -5 points
+    Program does not create a linked list: -10 points
+    
+5. Robot and RobotList  data members are private.
+    Data members are public: -1 points each up to -4
+    
+6. All dynamically allocated memory is deleted
+    Program fails to delete individual Robots: -2 points
+    Program fails to delete list nodes: -3 points
+    Program doesn't delete anything: -4 points
+   
+
+### Test Cases ###
+Do not grade the test cases for programs that do not compile. Just grade them as 0 for
+each test case.
+
+Programs that crash, halt, or terminate early should be graded as a 0 for every case
+that would have been tested after the halt.
+
+Please still maintain a list of programs that crash, quit early, or do not compile. I'll
+check those myself to see if they compile in a different environment for some reason.
+
+1. Start Program 2 Wiles Xiong
+    'Welcome' message of some sort is not printed: -2 points
+    Program does not ask for a number of Robots: -2 points
+    Program does not accept input for robots' names: -2 points
+     
+2. U a Thompson
+    Position doesn't take new name as input: -2 point each
+    Seg fault or other failure: -3 points
+
+3. M Wiles l m Wiles L
+    Position is wrong: -1 point each
+    Seg fault or other failure: -3 points
+
+4. M Xiong r...
+    Program does not print new position: -2 points
+    Robot does speed up: -3 points
+    Robot does not start again after the second 's': -3 points
+    Wrong attribute is updated: -3 points
+    Wrong robot is updated: -5 points
+    
+5. M Thompson r...
+    Program does not print new position: -2 points
+    Robots speeds up when it shouldn't or doesn't when it should: -3 points
+    Wrong attribute is updated: -3 points
+    Wrong robot is updated: -5 points
+
+6. u D Wiles m Wiles U a Wiles
+    Position doesn't take new name as input: -2 point each
+    Program moves Wiles after deletion: -2 points
+    Program deletes the wrong robot: -3 points
+    Program does not add Wiles back into the list: -3 points
+    Seg fault or other failure: -5 points
+
+7. r Thompson Shauna m Berry
+    Program does not print Berry's new name: -2 points
+    Program cannot rename Berry: -3 points
+    Program does not print an error when we try to move Berry: -5 points
+    Program adds Shauna to the list as a new robot: -5 points
+
+8. m Shauna l
+    Program does not print new position: -2 points
+    Wrong attribute is updated: -3 points
+    Program does not find Shauna: -3 points
+    Wrong robot is updated: -5 points  
+
+
+9. D
+    Distances are not in sorted order: -5 points
+    Not all robots are in list: -5 points
+    Distances are incorrect: -3 points/distance
+    Distances are printed without names: -8 points
+    Names are printed without distances: -8 points
+    Prints nothing: -10 points
+    
+
+10. Q
+    Program exits without printing a "goodbye" message: -2 points
+    Program keeps running: -5 points
+    

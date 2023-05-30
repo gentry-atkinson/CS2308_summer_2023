@@ -1,0 +1,92 @@
+/*### Problem MR 1 ###*/
+//Write a function called validPassword to determine if a user
+//  entered password is valid.
+//Parameters: 
+//  string pw
+//  int min_len
+//Returns: true if pw is at least min_len in length but no more than 24 characters
+//  and contains two or more upper case character. False otherwise.
+//Side Effects: none
+
+/*### Problem MR 2  ###*/
+//Analyze this function and count the number of operations performmed.
+//Use that information to determing the Big O time complexity
+//  of this function.
+int funkyFunc(int a[], int SIZE){
+    for(int i = 0; i < a[i]; i++){
+        int j = 1;
+        while(j < i){
+            if(j%10 == 0){
+                cout << "Power of 10" << endl;
+            }
+            j *= 2;
+        }
+    }
+    return 0;
+}
+
+/*### Problem MR 3 ###*/
+//Alter this implementation of Bubble Sort so that it will
+//  stop running as soon as the list is sorted. Your algorithm
+//  should have an O(n) runtime on a sorted list.
+
+void swap(int L[], int a, int b){
+    int temp = L[a];
+    L[a] = L[b];
+    L[b] = temp;
+    return;
+}
+
+void bubSort(int L[], const int SIZE){
+    for(int i = SIZE-1; i >= 0; i--){
+        int j = 0;
+        while(j < i){
+            if(L[j] > L[j+1]){
+                swap(L, i, j);
+            }
+            j++;
+        }
+    }
+    return;
+}
+
+int main(){
+    int a[] = {2, 5, 3, 8, 1, 9, 0, 3, 6, 7};
+    
+    bubSort(a, 10);
+    for(int i = 0; i < 10; i++)
+        cout << a[i] << ' ';
+    cout << endl;
+    return 0;
+}
+
+/* ### MR 4 ### */
+//Predict the output of secretFunc
+
+void secretFunc(){
+    int SIZE = 4;
+    int* a = new int[SIZE];
+    int* p = a;
+    for(; p<&a[SIZE]; p++) 
+        *p = 0;
+
+    p=a;     
+    
+    do{
+        if(*p == 0){
+            delete [] a;
+            SIZE *= 2;
+            a = new int[SIZE];
+            a[0] = SIZE;
+            for(int i = 1; i < SIZE; i++)a[i]= 0;
+        }
+        else{
+            a[0] = 0;
+            for(int i = 1; i < SIZE; i++)a[i]= SIZE; 
+        }
+        p = a;
+    }while(*p < 9);
+    cout << *p << endl;
+    delete [] a;
+    return;
+}
